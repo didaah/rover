@@ -1,0 +1,25 @@
+<?php
+// $Id$
+$info = array(
+  'name' => 'rover',
+  'ver' => '1.0',
+  'language' => 'zh-hans',
+  'description' => '仿 rover 主题',
+  'preview_original' => 'images/preview_original.png',
+  'preview_thumb' => 'images/preview_thumb.png',
+  'region' => array(
+  	'left' => '左栏',
+  	'right' => '右栏',
+  	'content_bottom' => '内容底部',
+  	'bottom' => '底部',
+  ),
+  'styles' => array(
+    'css/style.css'
+  ),
+  'styles_remove' => array(
+    //'misc/dida.css' => true, // 通用 css
+  ),
+  'scripts' => array(
+    'js/script.js'
+  )
+);
