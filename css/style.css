@@ -106,6 +106,30 @@ a {
   background: #DA5A04;
   color: #DA5A04;
 }
+#header .site_menu .site_menu_list_front a:hover, #header .site_menu .site_menu_list_front a.active{
+  background: green;
+  color: green;
+}
+#header .site_menu .site_menu_list_user a:hover, #header .site_menu .site_menu_list_user a.active{
+  background: #000033;
+  color: #000033;
+}
+#header .site_menu .site_menu_list_system_service a:hover, #header .site_menu .site_menu_list_system_service a.active{
+  background: purple;
+  color: purple;
+}
+#header .site_menu .site_menu_list_system_download a:hover, #header .site_menu .site_menu_list_system_download a.active{
+  background: grey;
+  color: grey;
+}
+#header .site_menu .site_menu_list_system_agent a:hover, #header .site_menu .site_menu_list_system_agent a.active{
+  background: maroon;
+  color: maroon;
+}
+#header .site_menu .site_menu_list_system_case a:hover, #header .site_menu .site_menu_list_system_case a.active{
+  background: #cc9900;
+  color: #cc9900;
+}
 
 #header .site_menu li.active span,
 #header .site_menu li.js_active span,
