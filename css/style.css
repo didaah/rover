@@ -70,9 +70,9 @@ a {
 
 #header .menu .site_menu li {
   height: 135px;
-  min-width: 100px;
+  min-width: 60px;
   padding: 0;
-  margin-left: 5px;
+  margin: 0 5px;
 }
 
 #header .menu .site_menu li a {
@@ -96,40 +96,19 @@ a {
   width: 100%;
   height: 125px;
   float: left;
-  background: #F8F8F8;
+  background: none;
 }
 
 #header .site_menu li.js_active a,
 #header .site_menu li.active a,
-#header .site_menu .site_menu_list_admin a,
-#header .site_menu .site_menu_list_admin a.active,
-#header .site_menu .site_menu_list_admin a:hover {
-  background: #DA5A04;
+#header .site_menu li a.active {
+  background: #9D3E03;
   color: #DA5A04;
 }
-#header .site_menu .site_menu_list_front a:hover, #header .site_menu .site_menu_list_front a.active, #header .site_menu .site_menu_list_front a{
-  background: green;
-  color: green;
-}
-#header .site_menu .site_menu_list_user a:hover, #header .site_menu .site_menu_list_user a.active, #header .site_menu .site_menu_list_user a{
-  background: #000033;
-  color: #000033;
-}
-#header .site_menu .site_menu_list_system_service a:hover, #header .site_menu .site_menu_list_system_service a.active, #header .site_menu .site_menu_list_system_service a{
-  background: purple;
-  color: purple;
-}
-#header .site_menu .site_menu_list_system_download a:hover, #header .site_menu .site_menu_list_system_download a.active, #header .site_menu .site_menu_list_system_download a{
-  background: grey;
-  color: grey;
-}
-#header .site_menu .site_menu_list_system_agent a:hover, #header .site_menu .site_menu_list_system_agent a.active, #header .site_menu .site_menu_list_system_agent a{
-  background: maroon;
-  color: maroon;
-}
-#header .site_menu .site_menu_list_system_case a:hover, #header .site_menu .site_menu_list_system_case a.active, #header .site_menu .site_menu_list_system_case a{
-  background: #cc9900;
-  color: #cc9900;
+
+#header .site_menu li a:hover {
+  background: #DA5A04;
+  color: #DA5A04;
 }
 
 #header .site_menu li.active span,
@@ -139,11 +118,6 @@ a {
   background: #f8f8f8;
 }
 
-#header .site_menu .site_menu_children{
-	position: absolute;
-	left:0px;
-}
-
 #header .site_menu .site_menu_children li {
   height: 35px;
   line-height: 35px;
@@ -151,13 +125,11 @@ a {
   padding: 0;
   margin: 0;
   border-top: 1px solid #333;
-  min-width: 100px;
-  _width: 100px;
-	overflow:hidden;
+  min-width: 180px;
+  _width: 180px;
 }
 
 #header .site_menu .site_menu_children li a {
-	font-size:12px;
   background: #000;
 }
 
