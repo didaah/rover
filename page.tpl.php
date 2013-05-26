@@ -48,9 +48,9 @@
         <?php echo $sub_tabs; ?>
         <?php echo $messages; ?>
         <?php echo $help; ?>
-		    <div id="content-block-top"><div class="content-block-column"><?php echo $content_top; ?></div></div>
+        <?php if ($content_top) : ?><div id="content-block-top"><div class="content-block-column"><?php echo $content_top; ?></div></div> <?php endif;?>
         <?php echo $content; ?>
-		    <div id="content-block-bottom"><div class="content-block-column"><?php echo $content_bottom; ?></div></div>
+        <?php if($content_bottom) : ?><div id="content-block-bottom"><div class="content-block-column"><?php echo $content_bottom; ?></div></div><?php endif?>
       </div>
       
       <?php if ($right) : ?>
