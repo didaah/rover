@@ -80,8 +80,8 @@ function rover_settings_form(&$form, $conf) {
   
   $form['fields']['content_top_size'] = array(
     '#title' => t('rover', '图片尺寸'),
-    '#default_value' => !empty($data['size']) ? $data['size'] : '950x400',
-    '#description' => t('rover', '将自动缩放至设定的尺寸，如：950x400，宽度不宜大于 950'),
+    '#default_value' => !empty($data['size']) ? $data['size'] : '950x310',
+    '#description' => t('rover', '将自动缩放至设定的尺寸，如：950x310，宽度不宜大于 950'),
     '#type' => 'textfield' 
   );
 

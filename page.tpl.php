@@ -17,9 +17,6 @@
         <a href="<?php echo $base_path?>" title="<?php echo $site_global->name; ?>" class="logo">
           <img src="<?php echo $site_global->logo; ?>" alt="<?php echo $site_global->name?>" />
         </a>
-        <p><a href="<?php echo $base_path?>" title="<?php echo $site_global->name; ?> <?php echo $site_global->slogan?>" class="logo">
-          <?php echo $site_global->slogan?>
-        </a></p>
       </div>
     </div></div>
 
