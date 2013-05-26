@@ -248,8 +248,8 @@ h1, h2, h3, h4, h5 {
   color: #333;
 }
 
-#content-bottom h1, #content-bottom h2, #content-bottom h3,
-#content-bottom h4, #content-bottom h5 {
+#main-bottom h1, #main-bottom h2, #main-bottom h3,
+#main-bottom h4, #main-bottom h5 {
   color: #DA5A04;
 }
 
@@ -260,7 +260,7 @@ h1, h2, h3, h4, h5 {
 }
 
 /*content-bottom*/
-#content-bottom { 
+#main-bottom { 
 	clear: both;
   background: #333333;
   border-bottom: 1px solid #444444;
@@ -268,13 +268,13 @@ h1, h2, h3, h4, h5 {
   color: #ccc;
 }
 
-#content-bottom .content-column {
+#main-bottom .content-column {
   overflow: hidden;
   height: 100%;
   border-left: 1px solid #666;
 }
 
-#content-bottom .block {
+#main-bottom .block {
   float: left;
   padding: 20px 5px;
   min-height: 160px;
@@ -283,7 +283,7 @@ h1, h2, h3, h4, h5 {
   width: 32%;
 }
 
-#content-bottom .block .block_content {
+#main-bottom .block .block_content {
   border: none;
   background: none;
 }

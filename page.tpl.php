@@ -48,7 +48,9 @@
         <?php echo $sub_tabs; ?>
         <?php echo $messages; ?>
         <?php echo $help; ?>
+		    <div id="content-block-top"><div class="content-block-column"><?php echo $content_top; ?></div></div>
         <?php echo $content; ?>
+		    <div id="content-block-bottom"><div class="content-block-column"><?php echo $content_bottom; ?></div></div>
       </div>
       
       <?php if ($right) : ?>
@@ -58,7 +60,7 @@
       <?php endif; ?>
 			
 		</div>
-		<div id="content-bottom"><div class="content-column"><?php echo $content_bottom; ?></div></div>
+		<div id="main-bottom"><div class="content-column"><?php echo $main_bottom; ?></div></div>
 		<div id="contact"><div class="content-column"><?php echo _rover_get_contact(); ?></div></div>
 		<div id="footer"><div class="content-column"><?php echo $site_global->footer; ?><?php echo $footer; ?></div></div>
     <?php if (!empty($debug)) : ?><div id="debug-info"><?php echo $debug; ?></div> <?php endif; ?>

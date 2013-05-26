@@ -10,7 +10,9 @@ $info = array(
   'region' => array(
   	'left' => '左栏',
   	'right' => '右栏',
+  	'main_bottom' => '主体底部',
   	'content_bottom' => '内容底部',
+  	'content_top' => '内容顶部',
   	'bottom' => '底部',
   ),
   'styles' => array(
