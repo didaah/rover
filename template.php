@@ -133,21 +133,38 @@ function _rover_get_content_top() {
   $is_show = $conf['themes']['rover']['settings']['is_content_top'];
 
   if (empty($is_admin) && ($is_show == 2 || ($is_show == 1 && dd_is_front())) && $data = custom_get('rover_themes_content_top')) {
-    $item = array();
+    $html = '';
     for ($i = 0; $i < 5; $i++) {
       if (!empty($data[$i])) {
         $rows = $data[$i];
       } else {
         continue;
       }
-      $html = '<a href="' . url($rows['link']) . '" title="' . $rows['title'] . '" target="_blank">';
+      $html .= '<li thumb="' . f(image_get_thumb('themes_rover_' . $i, $rows['file'], '70x40', 'scale_and_crop')) . '">';
+      if (!empty($rows['link'])) {
+        $html .= '<a href="' . $rows['link'] . '" title="' . $rows['title'] . '"';
+        if ($rows['target']) {
+          $html .= ' target="_blank"';
+        }
+        $html .= '>';
+      }
       $html .= '<img src="' . f(image_get_thumb('themes_rover_' . $i, $rows['file'], $data['size'])) . '" alt="' . $rows['title'] . '" />';
       $html .= '</a>';
-      $item[] = $html;
+      $html .= '</li>';
     }
-    if (!empty($item)) {
+
+    if (!empty($html)) {
       list($width, $height) = explode('x', $data['size']);
-      return '<div id="content-top"><div class="content-top">' . theme('item_list', $item, NULL, 'ul', array('class' => 'focus_change_list', 'style' => 'width:' . $width . 'px;height:' . $height . 'px')) . '</div></div>';
+      $output = '<div id="content_top"><div class="content_focus_image" id="content_focus_slider">';
+      $output .= '<ul class="focus_change_list">' . $html . '</ul>';
+      $output .= '</div></div>';
+      $output .= '<style>';
+      $output .= '.focus_change_list img {max-height: ' . $height . 'px;}';
+      $output .= '.focus_change_list {height: ' . $height . 'px; line-height: ' . $height . 'px;}';
+      $output .= '.content_focus_image {height: ' . $height . 'px; width: ' . $width . 'px;}';
+      $output .= '</style>';
+      $output .= '<script>$(function() {$(\'#content_focus_slider\').didaShow({});});</script>';
+      return $output;
     } else {
       return l(t('rover', '可设置幻灯片'), 'admin/themes/setting/rover');
     }
@@ -163,6 +180,7 @@ function _rover_get_contact() {
   if ($data = $conf['themes']['rover']['settings']['contact']) {
     $item = array();
     foreach ($data as $key => $value) {
+      if (empty($value)) continue;
       if ($key == 'qq') {
         $value = '<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=' . $value . '&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:' . $value . ':41" alt="' . t('rover', '点击这里给我发消息'). '" title="'. t('rover', '点击这里给我发消息') . '"></a>';
       }
