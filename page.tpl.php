@@ -60,7 +60,7 @@
       <?php endif; ?>
 			
 		</div>
-    <?php if (!empty($main_bottom)) : ?><div id="main-bottom"><div class="content-column"><?php echo $main_bottom; ?></div></div <?php endif ;?>
+    <?php if (!empty($main_bottom)) : ?><div id="main-bottom"><div class="content-column"><?php echo $main_bottom; ?></div></div> <?php endif ;?>
 		<div id="contact"><div class="content-column"><?php echo _rover_get_contact(); ?></div></div>
 		<div id="footer"><div class="content-column"><?php echo $site_global->footer; ?><?php echo $footer; ?></div></div>
     <?php if (!empty($debug)) : ?><div id="debug-info"><?php echo $debug; ?></div> <?php endif; ?>
